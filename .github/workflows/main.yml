@@ -1,11 +1,18 @@
 name: Build APK
 on: [push, pull_request]
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04  # Buildozer üçin has durnukly wersiýa
+
     steps:
       - uses: actions/checkout@v2
+
       - name: Build with Buildozer
-        uses: ArtemSerebrennikov/buildozer-action@v1
+        # Täze we işleýän Buildozer action-y ulanýarys
+        uses: ArtemSerebrennikov/buildozer-action@v1.2.1 
+        # Bellik: Eger ýokarky ýene işlemese, aşakdaky resmi alternatiwany ulanyp bilersiňiz:
+        # uses: kkdai/buildozer-action@master
         with:
           save_buildozer_config: false
+          
