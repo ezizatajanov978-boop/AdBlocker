@@ -9,3 +9,4 @@ jobs:
         uses: ArtemSerebrennikov/buildozer-action@v1
         with:
           save_buildozer_config: false
+          
