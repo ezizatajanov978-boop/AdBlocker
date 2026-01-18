@@ -3,16 +3,12 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04  # Buildozer üçin has durnukly wersiýa
+    runs-on: ubuntu-20.04
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Build with Buildozer
-        # Täze we işleýän Buildozer action-y ulanýarys
-        uses: ArtemSerebrennikov/buildozer-action@v1.2.1 
-        # Bellik: Eger ýokarky ýene işlemese, aşakdaky resmi alternatiwany ulanyp bilersiňiz:
-        # uses: kkdai/buildozer-action@master
+        uses: kkdai/buildozer-action@master
         with:
           save_buildozer_config: false
-          
